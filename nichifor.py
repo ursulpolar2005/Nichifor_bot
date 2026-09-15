@@ -34,7 +34,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
         if should_trigger:
             if chat_id not in nichifor_sessions:
                 nichifor_sessions[chat_id] = client.chats.create(
-                    model="gemini-3.6-flash",
+                    model="gemini-3.1-flash-lite",
                     config={
                         'system_instruction': NICHIFOR_INSTRUCTIONS,
                         'temperature': 0.9,
